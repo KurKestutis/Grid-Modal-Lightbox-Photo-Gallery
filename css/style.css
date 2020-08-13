@@ -31,11 +31,10 @@ main {
 
 /* Modal Context/Box */
 .modal-content {
-  /* background-color: #fefefe; */
-  margin: 10% auto; /* 15% from the top and centered */
+  margin: 10% auto; /* 10% from the top and centered */
   width: 900px; /* Same as photos width */
   animation-name: animatetop;
-  animation-duration: 0.5s;
+  animation-duration: 0.9s;
 }
 
 /* Add Animation */
@@ -49,14 +48,14 @@ main {
     opacity: 1;
   }
 }
-
 /* The close Button */
 .close {
   color: rgb(90, 88, 88);
   float: right;
   font-size: 28px;
   font-weight: bold;
-  padding-right: 5px;
+  padding-right: 55px;
+  padding-top: 55px;
 }
 
 .close:hover,
