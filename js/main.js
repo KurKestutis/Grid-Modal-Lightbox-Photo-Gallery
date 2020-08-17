@@ -19,3 +19,28 @@ window.onclick = function () {
     modal.style.display = 'none';
   }
 };
+
+// ------------ MODAL SLIDESHOW GALLERY --------------
+
+var images = [
+  'img/events/1_ren_Foto_Kestutis_Kurienius.jpg',
+  'img/events/2_ren_Foto_Kestutis_Kurienius.jpg',
+  'img/events/3_ren_Foto_Kestutis_Kurienius.jpg',
+];
+
+var num = 0;
+function next() {
+  var slideShowPlace = document.getElementById('slider');
+  num++;
+  if (num >= images.length) {
+    num = 0;
+  }
+  slideShowPlace.src = images[num];
+}
+
+window.onload = function () {
+  setInterval(move, 2500);
+  function move() {
+    next();
+  }
+};
