@@ -26,9 +26,18 @@ var images = [
   'img/events/1_ren_Foto_Kestutis_Kurienius.jpg',
   'img/events/2_ren_Foto_Kestutis_Kurienius.jpg',
   'img/events/3_ren_Foto_Kestutis_Kurienius.jpg',
+  'img/events/4_ren_Foto_Kestutis_Kurienius.jpg',
+  'img/events/5_ren_Foto_Kestutis_Kurienius19_DofE_2018-06-21_KK_img_8069.jpg',
+  'img/events/6_ren_Foto_Kestutis_Kurienius_28_DofE_2018-06-21_KK_img_8541.jpg',
 ];
 
 var num = 0;
+
+function currentSlide(n) {
+  var slideShowPlace = document.getElementById('slider');
+  slideShowPlace.src = images[n - 1];
+}
+
 function next() {
   var slideShowPlace = document.getElementById('slider');
   num++;

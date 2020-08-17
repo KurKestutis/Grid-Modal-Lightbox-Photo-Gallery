@@ -64,3 +64,7 @@ main {
   text-decoration: none;
   cursor: pointer;
 }
+
+.grid img {
+  width: 200px;
+}
