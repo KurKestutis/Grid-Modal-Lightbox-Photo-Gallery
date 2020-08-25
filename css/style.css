@@ -20,3 +20,13 @@ body {
 main {
   margin: 10px;
 }
+
+.allEventsPhotos {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.allEventsPhotos :only-child {
+  margin: 5px;
+}
