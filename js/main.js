@@ -36,6 +36,7 @@ var num = 0;
 function currentSlide(n) {
   var slideShowPlace = document.getElementById('slider');
   slideShowPlace.src = images[n - 1];
+  num = n - 1;
 }
 
 function next() {
@@ -47,9 +48,18 @@ function next() {
   slideShowPlace.src = images[num];
 }
 
-window.onload = function () {
-  setInterval(move, 2500);
-  function move() {
-    next();
+function prev() {
+  var slideShowPlace = document.getElementById('slider');
+  num--;
+  if (num <= 0) {
+    num = images.length - 1;
   }
-};
+  slideShowPlace.src = images[num];
+}
+
+// window.onload = function () {
+//   setInterval(move, 2500);
+//   function move() {
+//     next();
+//   }
+// };
