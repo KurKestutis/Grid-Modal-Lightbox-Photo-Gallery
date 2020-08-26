@@ -23,8 +23,9 @@ h2 {
   color: #7c2488;
 }
 
-.grid img {
+.allEventsPhotos img {
   width: 300px;
+  margin: 5px;
 }
 
 .allEventsPhotos {
