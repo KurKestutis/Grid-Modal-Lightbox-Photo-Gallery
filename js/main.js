@@ -6,6 +6,7 @@ function openModal() {
 // ------------MODAL CLOSE FUNCTIONS--------------
 // Get the <span> element that close the modal
 var span = document.getElementsByClassName('close')[0];
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   var modal = document.getElementById('myModal');
@@ -21,8 +22,9 @@ window.onclick = function () {
 };
 
 // ------------ MODAL SLIDESHOW GALLERY --------------
+var images;
 
-var images = [
+var imagesEvents = [
   'img/events/1_ren_Foto_Kestutis_Kurienius.jpg',
   'img/events/2_ren_Foto_Kestutis_Kurienius.jpg',
   'img/events/3_ren_Foto_Kestutis_Kurienius.jpg',
@@ -31,10 +33,29 @@ var images = [
   'img/events/6_ren_Foto_Kestutis_Kurienius_28_DofE_2018-06-21_KK_img_8541.jpg',
 ];
 
+var imagesConferences = [
+  'img/conferences/1_konf_Foto_Kestutis_Kurienius.jpg',
+  'img/conferences/2_konf_Foto_Kestutis_Kurienius_03_DofE_2018-06-21_KK_img_7264.jpg',
+  'img/conferences/3_konf_Foto_Kestutis_Kurienius_IMG_1092.1.jpg',
+  'img/conferences/4_konf_Foto_Kestutis_Kurienius_21_DofE_2018-06-21_KK_img_8081.jpg',
+  'img/conferences/5_konf_Foto_Kestutis_Kurienius_ IMG_1193.jpg',
+  'img/conferences/6_konf_Foto_Kestutis_Kurienius_147_Luxembourg_Delegation_In_Lithuania-2017_IMG_8773_KK.jpg',
+  'img/conferences/7_konf_Foto_Kestutis_Kurienius_145_Luxembourg_Delegation_In_Lithuania-2017_IMG_8746_KK.jpg',
+];
+
+function galleryNumber(g) {
+  if (g == 1) {
+    images = imagesEvents;
+  } else if (g == 2) {
+    images = imagesConferences;
+  }
+}
+
 var num = 0;
 
 function currentSlide(n) {
   var slideShowPlace = document.getElementById('slider');
+
   slideShowPlace.src = images[n - 1];
   num = n - 1;
 }
@@ -56,10 +77,3 @@ function prev() {
   }
   slideShowPlace.src = images[num];
 }
-
-// window.onload = function () {
-//   setInterval(move, 2500);
-//   function move() {
-//     next();
-//   }
-// };
